@@ -21,8 +21,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run:
-         command: 
-            echo $developer
+         echo $developer
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
