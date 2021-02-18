@@ -22,7 +22,7 @@ jobs:
          name: run template
          command: |
             aws cloudformation deploy \
-              --template-file /.circleci/template.yml \
+              --template-file ./.circleci/template.yml \
               --stack-name my-stack
   save_hello_world_output:
     docker:
