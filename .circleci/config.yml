@@ -20,7 +20,10 @@ jobs:
     steps:
       - run:
          name: run template
-         command: aws cloudformation create-stack --stack-name infra --template-body ~/template.yml
+         command: |
+            aws cloudformation deploy \
+              --template-file ~/template.yml \
+              --stack-name my-stack
   save_hello_world_output:
     docker:
       - image: circleci/node:13.8.0
