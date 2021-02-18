@@ -1,3 +1,4 @@
+Description: Learn CD with CircleCI
 Resources:
   MyEC2Instance: 
       Type: AWS::EC2::Instance
