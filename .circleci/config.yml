@@ -13,6 +13,14 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
 
 jobs:
+  
+  create_infrastructure:
+    docker:
+      - image: amazon/aws-cli
+    steps:
+      - run:
+         name: run template
+         command: aws cloudformation deploy --stack-name infra --template-body file://template.yml
   save_hello_world_output:
     docker:
       - image: circleci/node:13.8.0
