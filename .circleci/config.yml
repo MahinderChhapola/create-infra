@@ -20,7 +20,7 @@ jobs:
     steps:
       - run:
          name: run template
-         command: aws cloudformation create-stack --stack-name infra --template-body file://template.yml --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" 
+         command: aws cloudformation create-stack --stack-name infra --template-body file://.circleci/template.yml --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" 
   save_hello_world_output:
     docker:
       - image: circleci/node:13.8.0
